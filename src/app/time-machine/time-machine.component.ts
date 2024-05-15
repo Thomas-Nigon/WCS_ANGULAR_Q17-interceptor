@@ -1,19 +1,17 @@
 import { Component } from '@angular/core';
-import { DataService } from './datafetcher.service';
+import { DataService } from '../datafetcher.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+  selector: 'app-time-machine',
+  templateUrl: './time-machine.component.html',
+  styleUrl: './time-machine.component.scss',
 })
-export class AppComponent {
-  title = 'Q17_interceptor';
+export class TimeMachineComponent {
   data: any;
 
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
-    console.log('init');
     this.getData();
   }
 
